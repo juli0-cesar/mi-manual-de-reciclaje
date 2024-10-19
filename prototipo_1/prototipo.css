@@ -1,0 +1,89 @@
+body{
+    background-image: url();
+    background-color: #009090;
+    background-size: contain;
+    background-position: center;
+}
+.titulo{    
+     background-color:  rgba(0, 200, 0, 0.5); 
+     padding: 10px; 
+     border: 12px dashed #008000; 
+     margin: 12px auto; 
+     max-width: 90%; 
+     box-sizing: border-box;
+     border-radius: 30px;
+     text-align: center;
+     
+}
+.cuerpo{
+    background-color: rgba(0, 200, 0, 0.5); 
+    border: 12px dashed #008000;
+    margin: 12px auto;
+}
+
+.imagenes{
+    border: 12px dashed rgb(90, 200, 60 );
+    display: block;
+    margin: 20px auto;
+}
+.links{
+    display: block;
+    text-align: center;
+    color: #FFF ;
+
+}
+button {
+    background: green;
+    cursor: pointer;
+    padding: 16px 16px;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    z-index: 1; /* Asegura que el botón esté delante del pseudo-elemento */
+  }
+  
+  button::before {
+    content: "";
+    position: absolute; /* Posiciona el pseudo-elemento detrás del botón */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      45deg,
+      red, blue, green,  green, blue,red 
+    );
+    background-size: 800%;
+    border-radius: 12px; /* Asegúrate de que coincida con el borde del botón */
+    filter: blur(8px);
+    animation: glowing 10s infinite; /* Añade el nombre y duración de la animación */
+  }
+  
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+section{
+  display: flex;
+  width: 600px;
+  height: 430px;
+}
+section img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity:  .8;
+  transition: .5 easy;
+}
+  
